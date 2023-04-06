@@ -4,9 +4,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 
 function LayoutPage({ children }: { children: React.ReactNode }) {
     return (
-        <body>
-            <ChakraProvider>{children}</ChakraProvider>
-        </body>
+        <ChakraProvider>{children}</ChakraProvider>
     );
 }
 
