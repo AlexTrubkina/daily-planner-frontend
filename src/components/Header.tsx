@@ -16,6 +16,7 @@ import {
     DrawerContent,
     DrawerCloseButton,
     DrawerHeader,
+    Divider,
 } from "@chakra-ui/react";
 
 import { BsFillCalendarDateFill } from "react-icons/bs";
@@ -93,9 +94,18 @@ function Header(): JSX.Element {
                     </DrawerHeader>
 
                     <DrawerBody>
-                        {navLinks.map((item) => (
-                            <Button key={item}>{item}</Button>
-                        ))}
+                        <Flex flexDirection="column" gap="4" alignItems="start">
+                            {navLinks.map((item) => (
+                                <Button variant="ghost" key={item}>
+                                    {item}
+                                </Button>
+                            ))}
+                            <Divider/>
+                            <Button variant="ghost">Войти</Button>
+                            <Button variant="primary">
+                                Зарегистрироваться
+                            </Button>
+                        </Flex>
                     </DrawerBody>
                 </DrawerContent>
             </Drawer>
