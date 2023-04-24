@@ -18,6 +18,7 @@ import Header from "../components/Header";
 
 import LayoutPage from "../layout/LayoutPage";
 import DescriptionCard from "../components/DescriptionCards";
+import GradientDescriptionBox from "../components/GradientDescriptionBox";
 
 function HomeScreen() {
     return (
@@ -66,6 +67,7 @@ function HomeScreen() {
                 imgLink="/images/previewImgSecond.svg"
                 text="На каждый предусмотен индикатор настроения, который вы можете поставить в завиимости от вашего желания. Поделитесь с миром своей радостью или печалью."
             />
+            <GradientDescriptionBox/>
             </Container>
         </LayoutPage>
     );
