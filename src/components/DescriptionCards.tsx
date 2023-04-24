@@ -19,7 +19,8 @@ function DescriptionCard({
     text: string;
     heading: string;
     left: boolean;
-}) {
+}): JSX.Element {
+
     return (
         <Grid
             alignItems="center"
@@ -28,6 +29,7 @@ function DescriptionCard({
             mb="50px"
             gap="30px"
         >
+
             <GridItem>
                 {left ? (
                     <Flex flexDirection="column" gap="20px">
