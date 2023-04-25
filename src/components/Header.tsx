@@ -24,18 +24,14 @@ import { NavLink } from "react-router-dom";
 import { BsFillCalendarDateFill } from "react-icons/bs";
 import { FiMenu } from "react-icons/fi";
 
+import { navLinks } from "../data/datasets";
+
 function Header({ color }: { color: string }): JSX.Element {
     const isDesktop: boolean | undefined = useBreakpointValue({
         base: false,
         lg: true,
     });
-
-    const navLinks: Array<string | null | undefined> = [
-        "О нас",
-        "Тарифы",
-        "Поддержка",
-    ];
-
+    
     const { isOpen, onOpen, onClose } = useDisclosure();
     const mobileToggle: React.RefObject<HTMLButtonElement> = React.useRef(null);
     return (

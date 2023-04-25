@@ -1,28 +1,27 @@
 import React from "react";
 
-import { Box, Stack } from "@chakra-ui/react";
+import { Box, Heading, Stack } from "@chakra-ui/react";
+
+import { sidebarLinks } from "../data/datasets";
 
 function Sidebar(): JSX.Element {
-    const sidebarLinks: Array<string> = [
-        "Мой дневник",
-        "Мое настроение",
-        "Профиль",
-    ];
-
     return (
         <Box
-            position="fixed"
-            left={0}
-            p={5}
-            w="200px"
-            top={0}
-            h="100%"
-            bg="#dfdfdf"
+            padding="20px"
+            w="300px"
+            borderRadius="15px"
+            h="95vh"
+            bg="gray.100"
         >
-            <Stack spacing={8}>
+            <Box mb="40px">
+                <Heading color="gray.600" fontSize="3xl" fontWeight="bold">
+                    Daily Planner
+                </Heading>
+            </Box>
+            <Stack spacing={4}>
                 {
                     sidebarLinks.map((link) => ( 
-                        <Box backgroundColor="gray.100" borderRadius="15px" padding="10px" key={link}>
+                        <Box fontWeight="semibold" backgroundColor="white" _hover={{opacity: "1", cursor: "pointer"}} opacity={0.8} borderRadius="10px" padding="10px" key={link}>
                             {link}
                         </Box>
                         )

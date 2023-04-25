@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ChakraProvider, Box } from "@chakra-ui/react";
+import { ChakraProvider, Box, Flex } from "@chakra-ui/react";
 import Sidebar from "../components/Sidebar";
 
 function DashBoardLayout({
@@ -10,8 +10,15 @@ function DashBoardLayout({
 }): JSX.Element {
     return (
         <ChakraProvider>
-            <Sidebar />
-            <Box>{children}</Box>
+            <Flex m="20px" gap="20px">
+                <Sidebar />
+
+                <Box
+                    borderRadius="20px" 
+                >
+                    {children}
+                </Box>
+            </Flex>
         </ChakraProvider>
     );
 }
