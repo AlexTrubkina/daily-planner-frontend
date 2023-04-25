@@ -19,10 +19,12 @@ import {
     Divider,
 } from "@chakra-ui/react";
 
+import { NavLink } from "react-router-dom";
+
 import { BsFillCalendarDateFill } from "react-icons/bs";
 import { FiMenu } from "react-icons/fi";
 
-function Header({color} : {color: string}): JSX.Element {
+function Header({ color }: { color: string }): JSX.Element {
     const isDesktop: boolean | undefined = useBreakpointValue({
         base: false,
         lg: true,
@@ -40,14 +42,18 @@ function Header({color} : {color: string}): JSX.Element {
         <Box backgroundColor={color} as="nav">
             <HStack py="4" px="20px" spacing="10" justify="space-between">
                 <Flex gap="20px" alignItems="center">
-                    <Icon
-                        as={BsFillCalendarDateFill}
-                        boxSize={10}
-                        color="teal"
-                    />
-                    <Text fontWeight="bold" fontSize="xl">
-                        Daily Planner
-                    </Text>
+                    <NavLink to="/">
+                        <Icon
+                            as={BsFillCalendarDateFill}
+                            boxSize={10}
+                            color="teal"
+                        />
+                    </NavLink>
+                    <NavLink to="/">
+                        <Text fontWeight="bold" fontSize="xl">
+                            Daily Planner
+                        </Text>
+                    </NavLink>
                 </Flex>
                 {isDesktop ? (
                     <Flex justify="space-between" flex="1">
@@ -57,10 +63,14 @@ function Header({color} : {color: string}): JSX.Element {
                             ))}
                         </ButtonGroup>
                         <HStack spacing="3">
-                            <Button variant="ghost">Войти</Button>
-                            <Button variant="primary">
-                                Зарегистрироваться
-                            </Button>
+                            <NavLink to="/signin">
+                                <Button variant="ghost">Войти</Button>
+                            </NavLink>
+                            <NavLink to="/signup">
+                                <Button variant="primary">
+                                    Зарегистрироваться
+                                </Button>
+                            </NavLink>
                         </HStack>
                     </Flex>
                 ) : (
@@ -100,7 +110,7 @@ function Header({color} : {color: string}): JSX.Element {
                                     {item}
                                 </Button>
                             ))}
-                            <Divider/>
+                            <Divider />
                             <Button variant="ghost">Войти</Button>
                             <Button variant="primary">
                                 Зарегистрироваться
