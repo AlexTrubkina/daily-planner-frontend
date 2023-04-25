@@ -23,7 +23,7 @@ import GradientDescriptionBox from "../components/GradientDescriptionBox";
 function HomeScreen() {
     return (
         <LayoutPage>
-            <Header />
+            <Header color="teal.100"/>
             <Flex bg="teal.100" h="89vh" alignItems="center">
                 <Container maxW="70%">
                     <Grid

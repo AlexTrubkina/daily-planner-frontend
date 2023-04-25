@@ -22,7 +22,7 @@ import {
 import { BsFillCalendarDateFill } from "react-icons/bs";
 import { FiMenu } from "react-icons/fi";
 
-function Header(): JSX.Element {
+function Header({color} : {color: string}): JSX.Element {
     const isDesktop: boolean | undefined = useBreakpointValue({
         base: false,
         lg: true,
@@ -37,7 +37,7 @@ function Header(): JSX.Element {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const mobileToggle: React.RefObject<HTMLButtonElement> = React.useRef(null);
     return (
-        <Box bg="teal.100" as="nav">
+        <Box backgroundColor={color} as="nav">
             <HStack py="4" px="20px" spacing="10" justify="space-between">
                 <Flex gap="20px" alignItems="center">
                     <Icon
