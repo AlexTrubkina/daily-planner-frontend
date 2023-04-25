@@ -67,8 +67,9 @@ function HomeScreen() {
                 imgLink="/images/previewImgSecond.svg"
                 text="На каждый предусмотен индикатор настроения, который вы можете поставить в завиимости от вашего желания. Поделитесь с миром своей радостью или печалью."
             />
-            <GradientDescriptionBox/>
             </Container>
+            <GradientDescriptionBox/>
+            
         </LayoutPage>
     );
 }
