@@ -20,7 +20,7 @@ import LayoutPage from "../../layout/LayoutPage";
 import { AiOutlineGoogle } from "react-icons/ai";
 import { FaYandex } from "react-icons/fa";
 
-function SignIn(): JSX.Element {
+function SignUp(): JSX.Element{
     return (
         <LayoutPage>
             <Header color="white" />
@@ -38,7 +38,7 @@ function SignIn(): JSX.Element {
                     >
                         <CardBody>
                             <Heading mb="30px" fontWeight="bold">
-                                Войдите в аккаунт
+                                Зарегистрируйтесь
                             </Heading>
 
                             <Text fontWeight="semibold" mb="8px">
@@ -49,25 +49,25 @@ function SignIn(): JSX.Element {
                                 Введите пароль
                             </Text>
                             <Input backgroundColor="white" />
+                            <Text fontWeight="semibold" mb="8px" mt="10px">
+                                Повторите пароль
+                            </Text>
+                            <Input backgroundColor="white" />
                             <Box mt="20px" textDecoration="underline">
-                                <Link to="#">Забыли пароль?</Link>
+                                <Link to="#">Уже есть аккаунт?</Link>
                             </Box>
-                            <Grid mt="30px" gridTemplateColumns="5fr 1fr" alignItems="center">
+                            <Grid
+                                mt="30px"
+                                gridTemplateColumns="5fr 1fr"
+                                alignItems="center"
+                            >
                                 <GridItem>
-                                    <Button
-                                        colorScheme="facebook"
-                                        w="100px"
-                                        
-                                    >
+                                    <Button colorScheme="facebook" w="100px">
                                         Войти
                                     </Button>
                                 </GridItem>
                                 <GridItem>
-                                    <Flex
-                                        gap="10px"
-                                        alignItems="center"
-                                        
-                                    >
+                                    <Flex gap="10px" alignItems="center">
                                         <Flex
                                             transition="0.2s"
                                             alignItems="center"
@@ -117,4 +117,4 @@ function SignIn(): JSX.Element {
     );
 }
 
-export default SignIn;
+export default SignUp;
