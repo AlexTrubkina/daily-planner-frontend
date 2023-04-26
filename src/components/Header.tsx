@@ -31,7 +31,7 @@ function Header({ color }: { color: string }): JSX.Element {
         base: false,
         lg: true,
     });
-    
+
     const { isOpen, onOpen, onClose } = useDisclosure();
     const mobileToggle: React.RefObject<HTMLButtonElement> = React.useRef(null);
     return (
@@ -89,14 +89,18 @@ function Header({ color }: { color: string }): JSX.Element {
                 <DrawerContent>
                     <DrawerCloseButton />
                     <DrawerHeader>
-                        <Icon
-                            as={BsFillCalendarDateFill}
-                            boxSize={10}
-                            color="teal"
-                        />
-                        <Text fontWeight="bold" fontSize="xl">
-                            Daily Planner
-                        </Text>
+                        <NavLink to="/">
+                            <Icon
+                                as={BsFillCalendarDateFill}
+                                boxSize={10}
+                                color="teal"
+                            />
+                        </NavLink>
+                        <NavLink to="/">
+                            <Text fontWeight="bold" fontSize="xl">
+                                Daily Planner
+                            </Text>
+                        </NavLink>
                     </DrawerHeader>
 
                     <DrawerBody>
@@ -107,10 +111,14 @@ function Header({ color }: { color: string }): JSX.Element {
                                 </Button>
                             ))}
                             <Divider />
-                            <Button variant="ghost">Войти</Button>
-                            <Button variant="primary">
-                                Зарегистрироваться
-                            </Button>
+                            <NavLink to="/signin">
+                                <Button variant="ghost">Войти</Button>
+                            </NavLink>
+                            <NavLink to="/signup">
+                                <Button variant="primary">
+                                    Зарегистрироваться
+                                </Button>
+                            </NavLink>
                         </Flex>
                     </DrawerBody>
                 </DrawerContent>
