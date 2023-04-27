@@ -11,22 +11,29 @@ function Sidebar(): JSX.Element {
             w="300px"
             borderRadius="15px"
             h="95vh"
-            bg="gray.100"
+            backgroundColor="#e0e0e0"
+            boxShadow="34px 34px 60px #bebebe, -34px -34px 60px #ffffff"
         >
             <Box mb="40px">
-                <Heading color="gray.600" fontSize="3xl" fontWeight="bold">
+                <Heading color="blackAlpha.700" fontSize="3xl" fontWeight="bold">
                     Daily Planner
                 </Heading>
             </Box>
             <Stack spacing={4}>
-                {
-                    sidebarLinks.map((link) => ( 
-                        <Box fontWeight="semibold" backgroundColor="white" _hover={{opacity: "1", cursor: "pointer"}} opacity={0.8} borderRadius="10px" padding="10px" key={link}>
-                            {link}
-                        </Box>
-                        )
-                    )
-                }
+                {sidebarLinks.map((link) => (
+                    <Box
+                        fontWeight="semibold"
+                        color="blackAlpha.600"
+                        backgroundColor="linear-gradient(145deg, #f0f0f0, #cacaca)"
+                        boxShadow="9px 9px 18px #bebebe, -9px -9px 18px #ffffff"
+                        _hover={{ background: "linear-gradient(145deg,#cacaca, #f0f0f0)", cursor: "pointer" }}
+                        borderRadius="10px"
+                        padding="10px"
+                        key={link}
+                    >
+                        {link}
+                    </Box>
+                ))}
             </Stack>
         </Box>
     );
