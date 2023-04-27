@@ -2,7 +2,13 @@ import React from "react";
 
 import { Avatar, Box, Flex } from "@chakra-ui/react";
 
-function ProfileHeader(): JSX.Element {
+function ProfileHeader({
+    firstName,
+    lastName,
+}: {
+    firstName: string;
+    lastName: string;
+}): JSX.Element {
     return (
         <Box
             borderRadius="15px"
@@ -11,13 +17,17 @@ function ProfileHeader(): JSX.Element {
             boxShadow="inset -9px 9px 18px #bebebe, inset 9px -9px 18px #ffffff"
         >
             <Flex gap="20px" alignItems="center">
-                <Avatar boxShadow="5px -5px 10px #bebebe, -5px 5px 10px #ffffff" size="xl" src="/images/cat-class.jpeg" />
+                <Avatar
+                    boxShadow="5px -5px 10px #bebebe, -5px 5px 10px #ffffff"
+                    size="xl"
+                    src="/images/cat-class.jpeg"
+                />
                 <Box>
                     <Box fontWeight="semibold" color="blackAlpha.600">
-                        Имя
+                        {firstName}
                     </Box>
                     <Box fontWeight="semibold" color="blackAlpha.600">
-                        Фамилия
+                        {lastName}
                     </Box>
                 </Box>
             </Flex>
