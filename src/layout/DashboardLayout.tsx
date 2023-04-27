@@ -12,7 +12,7 @@ function DashBoardLayout({
 }): JSX.Element {
     return (
         <ChakraProvider>
-            <Box bg="#e0e0e0"  h="110vh" mt="-20px" pt="20px">
+            <Box bg="#e0e0e0"  minH="110vh" pb="20px" mt="-20px" pt="20px">
             <Grid m="20px" gridTemplateColumns="1fr 3fr" columnGap="20px">
 
                 <Sidebar />
