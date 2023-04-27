@@ -3,6 +3,7 @@ import React from "react";
 import { Box, Heading, Stack } from "@chakra-ui/react";
 
 import { sidebarLinks } from "../data/datasets";
+import { Link } from "react-router-dom";
 
 function Sidebar(): JSX.Element {
     return (
@@ -21,6 +22,7 @@ function Sidebar(): JSX.Element {
             </Box>
             <Stack spacing={4}>
                 {sidebarLinks.map((link) => (
+                    <Link key={link.name} to={link.link}>
                     <Box
                         fontWeight="semibold"
                         color="blackAlpha.600"
@@ -29,10 +31,11 @@ function Sidebar(): JSX.Element {
                         _hover={{ background: "linear-gradient(145deg,#cacaca, #f0f0f0)", cursor: "pointer" }}
                         borderRadius="10px"
                         padding="10px"
-                        key={link}
+                        
                     >
-                        {link}
+                        {link.name}
                     </Box>
+                    </Link>
                 ))}
             </Stack>
         </Box>
