@@ -2,7 +2,7 @@ export const sidebarLinks: { name: string; link: string; icon: JSX.Element }[] =
     [
         {
             name: "Мой дневник",
-            link: "/dashboard",
+            link: "/dashboard/dairy",
             icon: (
                 <svg
                     xmlns="http://www.w3.org/2000/svg"

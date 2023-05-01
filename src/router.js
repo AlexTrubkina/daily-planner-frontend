@@ -4,6 +4,7 @@ import { createBrowserRouter } from "react-router-dom";
 import SignIn from "./screens/Auth/SignIn";
 import SignUp from "./screens/Auth/SignUp";
 import Profile from "./screens/Dashboard/Profile";
+import DairyEditor from "./screens/Dashboard/DairyEditor";
 
 export const router = createBrowserRouter([
     {
@@ -21,5 +22,9 @@ export const router = createBrowserRouter([
     {
         path: "/dashboard",
         element: <Profile/>
+    },
+    {
+        path: "/dashboard/dairy",
+        element: <DairyEditor/>
     }
 ]);
