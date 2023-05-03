@@ -6,6 +6,7 @@ import SignUp from "./screens/Auth/SignUp";
 import Profile from "./screens/Dashboard/Profile";
 import DairyEditor from "./screens/Dashboard/DairyEditor";
 import MyPlans from "./screens/Dashboard/MyPlans";
+import MyFeeligs from "./screens/Dashboard/MyFeelings";
 
 export const router = createBrowserRouter([
     {
@@ -31,5 +32,9 @@ export const router = createBrowserRouter([
     {
         path: "dashboard/my-plans",
         element: <MyPlans/>
+    }, 
+    {
+        path: "dashboard/my-feelings",
+        element: <MyFeeligs/>
     }
 ]);

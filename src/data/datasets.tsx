@@ -1,7 +1,4 @@
-import { StatDownArrow } from "@chakra-ui/react";
-import { css } from "@emotion/react";
-import { distance2D } from "framer-motion";
-import { BsDeviceSsdFill } from "react-icons/bs";
+
 
 export const sidebarLinks: { name: string; link: string; icon: JSX.Element }[] =
     [
@@ -23,7 +20,7 @@ export const sidebarLinks: { name: string; link: string; icon: JSX.Element }[] =
         },
         {
             name: "Мое настроение",
-            link: "/dashboard",
+            link: "/dashboard/my-feelings",
             icon: (
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
