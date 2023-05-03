@@ -8,7 +8,7 @@ import { Slate, Editable, withReact } from "slate-react";
 
 import { BaseEditor, Descendant } from "slate";
 import { ReactEditor } from "slate-react";
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 
 type CustomElement = { type: "paragraph"; children: CustomText[] };
 type CustomText = { text: string };
@@ -24,6 +24,10 @@ declare module "slate" {
 function DairyEditor(): JSX.Element {
     const [editor] = useState(() => withReact(createEditor()));
 
+    const today = new Date().toDateString();
+    console.log(today);
+    
+
     const initialValue: Descendant[] = [
         {
             type: "paragraph",
@@ -33,6 +37,9 @@ function DairyEditor(): JSX.Element {
 
     return (
         <DashBoardLayout>
+            <Text fontWeight="bold" color="blackAlpha.700">
+                Дата {today}
+            </Text>
             <Box
                 borderRadius="15px"
                 background="linear-gradient(145deg, #cacaca, #f0f0f0);"

@@ -1,4 +1,3 @@
-import { Flex } from "@chakra-ui/react";
 import React from "react";
 import ProfileHeader from "../../components/profileHeader";
 import ProfileInfoCard from "../../components/ProfileInfoCard";
