@@ -12,8 +12,8 @@ function Sidebar(): JSX.Element {
             w="300px"
             borderRadius="15px"
             h="95vh"
-            backgroundColor="#e0e0e0"
-            boxShadow="34px 34px 60px #bebebe, -34px -34px 60px #ffffff"
+            backgroundColor="#b8eaff"
+            border="2px solid #47a6ff"
         >
             <Box mb="40px">
                 <Link to="/">
@@ -32,11 +32,9 @@ function Sidebar(): JSX.Element {
                         <Flex
                             fontWeight="semibold"
                             color="blackAlpha.600"
-                            backgroundColor="linear-gradient(145deg, #f0f0f0, #cacaca)"
-                            boxShadow="9px 9px 18px #bebebe, -9px -9px 18px #ffffff"
+                            border="2px solid #47a6ff"
                             _hover={{
-                                background:
-                                    "linear-gradient(145deg,#cacaca, #f0f0f0)",
+                                background: "#47a6ff",
                                 cursor: "pointer",
                             }}
                             borderRadius="10px"

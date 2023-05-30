@@ -23,9 +23,8 @@ function ProfileInfoCard({
 }): JSX.Element {
     return (
         <Card
-            boxShadow="-5px -5px 10px #bebebe, 5px 5px 10px #ffffff"
             borderRadius="20px"
-            background="linear-gradient(200deg, #f0f0f0, #cacaca)"
+            border="2px solid #47a6ff"
             mt="20px"
         >
             <CardHeader>

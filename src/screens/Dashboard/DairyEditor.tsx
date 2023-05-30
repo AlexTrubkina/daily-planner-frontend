@@ -38,12 +38,12 @@ function DairyEditor(): JSX.Element {
     return (
         <DashBoardLayout>
             <Text fontWeight="bold" color="blackAlpha.700">
-                Дата {today}
+                {today}
             </Text>
             <Box
                 borderRadius="15px"
-                background="linear-gradient(145deg, #cacaca, #f0f0f0);"
-                boxShadow="14px 14px 28px #bebebe,-14px -14px 28px #ffffff;"
+                border="2px solid #47a6ff"
+                backgroundColor="#fff"
                 minH="50vh"
                 padding="30px"
                 mb="20px"
@@ -55,11 +55,9 @@ function DairyEditor(): JSX.Element {
             <Flex
                 fontWeight="semibold"
                 color="blackAlpha.600"
-                backgroundColor="linear-gradient(145deg, #f0f0f0, #cacaca)"
-                boxShadow="9px 9px 18px #bebebe, -9px -9px 18px #ffffff"
+                border="2px solid #47a6ff"
                 _hover={{
-                    background:
-                        "linear-gradient(145deg,#cacaca, #f0f0f0)",
+                    background: "#47a6ff",
                     cursor: "pointer",
                 }}
                 borderRadius="10px"

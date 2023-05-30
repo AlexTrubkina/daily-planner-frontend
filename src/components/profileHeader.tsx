@@ -13,12 +13,11 @@ function ProfileHeader({
         <Box
             borderRadius="15px"
             padding="20px"
-            backgroundColor="#e0e0e0"
-            boxShadow="inset -9px 9px 18px #bebebe, inset 9px -9px 18px #ffffff"
+            backgroundColor="#b8eaff"
+            border="2px solid #47a6ff"
         >
             <Flex gap="20px" alignItems="center">
                 <Avatar
-                    boxShadow="5px -5px 10px #bebebe, -5px 5px 10px #ffffff"
                     size="xl"
                     src="/images/cat-class.jpeg"
                 />
